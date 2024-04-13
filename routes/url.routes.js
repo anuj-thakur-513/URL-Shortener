@@ -11,7 +11,7 @@ const urlRouter = Router();
 
 urlRouter.post("/", verifyJwt, handleGenerateShortUrl);
 urlRouter.get("/", verifyJwt, handleGetAllUrls);
-urlRouter.get("/:shortId", verifyJwt, handleVisitUrl);
+urlRouter.get("/:shortId", handleVisitUrl);
 urlRouter.get("/analytics/:shortId", verifyJwt, handleGetAnalytics);
 
 export default urlRouter;

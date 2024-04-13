@@ -16,6 +16,7 @@ const handleGenerateShortUrl = asyncHandler(async (req, res) => {
     shortId: shortId,
     redirectUrl: url,
     visitHistory: [],
+    createdBy: req.user._id,
   });
 
   const shortenedUrl = await URL.findById(addedUrl?._id).select("-_id");
@@ -32,7 +33,7 @@ const handleGenerateShortUrl = asyncHandler(async (req, res) => {
 });
 
 const handleGetAllUrls = asyncHandler(async (req, res) => {
-  const urls = await URL.find();
+  const urls = await URL.find({ createdBy: req.user._id });
   return res
     .status(200)
     .json(new ApiResponse(200, urls, "fetched all urls successfully"));
@@ -59,9 +60,11 @@ const handleVisitUrl = asyncHandler(async (req, res) => {
 
 const handleGetAnalytics = asyncHandler(async (req, res) => {
   const { shortId } = req.params;
-  const result = await URL.findOne({ shortId: shortId });
+  const result = await URL.findOne({
+    $and: [{ shortId: shortId }, { createdBy: req.user._id }],
+  });
   if (!result) {
-    throw new ApiError(500, "invalid short url");
+    throw new ApiError(401, "unauthorized request");
   }
 
   return res.status(200).json(
