@@ -5,12 +5,13 @@ import {
   handleGetAnalytics,
   handleVisitUrl,
 } from "../controllers/url.controller.js";
+import { verifyJwt } from "../middlewares/auth.middleware.js";
 
 const urlRouter = Router();
 
-urlRouter.post("/", handleGenerateShortUrl);
-urlRouter.get("/", handleGetAllUrls);
-urlRouter.get("/:shortId", handleVisitUrl);
-urlRouter.get("/analytics/:shortId", handleGetAnalytics);
+urlRouter.post("/", verifyJwt, handleGenerateShortUrl);
+urlRouter.get("/", verifyJwt, handleGetAllUrls);
+urlRouter.get("/:shortId", verifyJwt, handleVisitUrl);
+urlRouter.get("/analytics/:shortId", verifyJwt, handleGetAnalytics);
 
 export default urlRouter;
