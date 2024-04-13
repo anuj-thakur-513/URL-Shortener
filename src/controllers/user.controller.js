@@ -1,4 +1,5 @@
-import { AUTH_COOKIE_OPTIONS, EMAIL_REGEX } from "../constants.js";
+import { EMAIL_REGEX } from "../constants.js";
+import { AUTH_COOKIE_OPTIONS } from "../configs/authCookie.config.js";
 import jwt from "jsonwebtoken";
 import User from "../models/user.model.js";
 import ApiError from "../utils/ApiError.js";
