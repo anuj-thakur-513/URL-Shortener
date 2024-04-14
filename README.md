@@ -4,6 +4,10 @@
 
 It is a URL Shortening service that will help you in shortening your url by which you can get a more precised version of your URL at ease.
 
+## ER Diagram of DB
+
+![](/github_assets/er-diagram.jpg)
+
 ## Run Locally
 
 Clone the project
