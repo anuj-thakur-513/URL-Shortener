@@ -174,6 +174,10 @@ Change `.env.example` file to `.env` and add the following required variables:
 | `shortId`      | `string` | **Required**. generated shortId |
 | `user_id`      | `objectId` | **Required**. user id sent from auth middleware using cookies |
 
+
+## Find this project useful ? ❤️
+Support it by clicking the 🌟 button on the upper right of this page. ❤️
+
 ## Tech Stack
 Node.js
 
