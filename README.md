@@ -1,6 +1,5 @@
 # URL Shortener [Backend]
 
-[](/github_assets/short-url-banner.png)
 It is a URL Shortening service that will help you in shortening your url by which you can get a more precised version of your URL at ease.
 
 ## Run Locally
