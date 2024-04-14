@@ -59,6 +59,7 @@ Change `.env.example` file to `.env` and add the following required variables:
 ```
 .
 ├── LICENSE
+├── README.md
 ├── package-lock.json
 ├── package.json
 └── src
