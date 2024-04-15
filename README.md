@@ -8,6 +8,10 @@ It is a URL Shortening service that will help you in shortening your url by whic
 
 ![](/github_assets/er-diagram.jpg)
 
+## 3RE Architecture
+
+1[](/github_assets/3re-architecture.png)
+
 ## Run Locally
 
 Clone the project
