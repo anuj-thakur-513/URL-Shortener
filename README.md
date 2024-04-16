@@ -10,7 +10,7 @@ It is a URL Shortening service that will help you in shortening your url by whic
 
 ## 3RE Architecture
 
-1[](/github_assets/3re-architecture.png)
+![](/github_assets/3re-architecture.png)
 
 ## Run Locally
 
